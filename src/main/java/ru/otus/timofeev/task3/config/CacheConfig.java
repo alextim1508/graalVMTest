@@ -18,7 +18,7 @@ public class CacheConfig {
 
     public static final String CACHE_NAME = "UserCache";
 
-//    @Bean
+    @Bean
     public CacheManager caffeineCacheManager(@Value("${user-cache.maxSize}") long maxSize,
                                              @Value("${user-cache.expireInMinutes}") long expireInMinutes) {
         CaffeineCacheManager cacheManager = new CaffeineCacheManager();

@@ -20,7 +20,7 @@ import static ru.otus.timofeev.task3.config.CacheConfig.CACHE_NAME;
 
 
 @Service
-//@CacheConfig(cacheNames = CACHE_NAME)
+@CacheConfig(cacheNames = CACHE_NAME)
 @RequiredArgsConstructor
 @Slf4j
 public class UserServiceImpl implements UserService {
@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     private final UserRepository repository;
     private final MessageSource messageSource;
 
-//    @CachePut(key = "#user.getId()")
+    @CachePut(key = "#user.getId()")
     @Override
     public User create(User user) {
         log.info("Insert to database. User: {}", user);
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
         return savedUser;
     }
 
-//    @Cacheable(key = "#id")
+    @Cacheable(key = "#id")
     @Override
     public User getById(Long id) {
         log.info("Select from database user with id {}", id);
