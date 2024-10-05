@@ -1,0 +1,35 @@
+###
+POST http://localhost:8080/user
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "name" : "ivan",
+  "email" : "ivan@yandex.ru",
+  "password" : "pass"
+}
+
+###
+POST http://localhost:8080/user
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "name" : "alex",
+  "email" : "alex@yandex.ru",
+  "password" : "pass"
+}
+
+###
+GET http://localhost:8080/user
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+###
+GET http://localhost:8080/user/1
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
